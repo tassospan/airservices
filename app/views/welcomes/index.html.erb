@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Admin Panel for Front Page's Inputs</h1>
+    
+    <% @welcomes.each do |w| %>
+    <div class="row">
+    <%= w.title %>  
+    <%= link_to 'Edit', edit_welcome_path(w), class: "btn btn-warning btn-xs" %>
+    </div>
+    <% end %>
+</div>
