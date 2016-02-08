@@ -1,4 +1,12 @@
 <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <ul class="nav navbar-nav">
+            <li><%= link_to 'Clients Administration', clients_path %></li>
+            <li><%= link_to 'Home Page', root_path %></li>
+        </ul>
+      </div>
+    </nav>
     <h1>Admin Panel for Front Page's Inputs</h1>
     
     <% @welcomes.each do |w| %>
