@@ -23,7 +23,7 @@ group :development do
 end
 
 group :production do
+  gem 'rails_12factor', '~> 0.0.3'
   gem 'pg', '~> 0.18.4'
-  gem 'rails_12factor'
 end
 
