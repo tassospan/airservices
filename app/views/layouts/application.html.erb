@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Airservices</title>
+  <title>Airservices by K.Kavounis</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,6 +10,16 @@
 <body>
 
 <%= yield %>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+ 
+  $(".scroll").click(function(event){   
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+  });
+});
+</script>
 
 </body>
 </html>
