@@ -3,6 +3,7 @@ class WelcomesController < ApplicationController
   
   def index
     @welcomes = Welcome.all
+    @socials = Social.all
   end
  
   def edit
