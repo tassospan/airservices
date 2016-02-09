@@ -1,5 +1,5 @@
 class SocialsController < ApplicationController
-    http_basic_authenticate_with name: "kostas", password: "k@vouni$2016"
+    http_basic_authenticate_with name: "", password: ""
     before_action :find_social, only: [:edit, :update]
     
   def edit

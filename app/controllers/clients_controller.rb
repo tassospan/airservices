@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-    http_basic_authenticate_with name: "kostas", password: "k@vouni$2016", except: [:new, :create]
+    http_basic_authenticate_with name: "", password: "", except: [:new, :create]
     before_action :find_client, only: [:show, :edit, :update, :destroy]
   
   def index
