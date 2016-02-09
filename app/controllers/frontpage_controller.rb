@@ -16,7 +16,8 @@ class FrontpageController < ApplicationController
         @client = Client.new(client_params)
         if @client.save
         MyMailer.welcome_email(@client).deliver
-        redirect_to root_path
+        SenToMe.register_email(@client).deliver
+        redirect_to root_path, notice: 'Ευχαριστούμε για την Εγγραφή σας'
         else
         render 'new'
         end
