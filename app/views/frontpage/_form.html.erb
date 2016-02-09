@@ -1,12 +1,12 @@
 <div class="modal-form">
 <%= simple_form_for(Client.new, html: { class: 'form-horizontal' }) do |f| %>
-<%= f.input :name, :required => true %>
-<%= f.input :surname, :required => true %>
-<%= f.input :phone, :required => true %>
-<%= f.input :email, :required => true %>
-<%= f.input :address %>
-<%= f.input :floor %>
-<%= f.input :message %>
-<%= f.button :submit, "Register" %>
+<%= f.input :name, :label => "Όνομα", :required => true %>
+<%= f.input :surname, :label => "Επίθετο", :required => true %>
+<%= f.input :phone, :label => "Κινητό", :required => true %>
+<%= f.input :email, :label => "Email", :required => true %>
+<%= f.input :address, :label => "Διεύθυνση" %>
+<%= f.input :floor, :label => "Όροφος" %>
+<%= f.input :message, :label => "Μήνυμα" %>
+<%= f.button :submit, "Εγγραφή" %>
 <% end %>
 </div>

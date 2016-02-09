@@ -1,5 +1,5 @@
 <%= simple_form_for(@welcome, html: { class: 'form-horizontal' }) do |f| %>
-<%= f.input :title %>
-<%= f.input :body %>
-<%= f.button :submit %>
+<%= f.input :title, :label => "Τίτλος" %>
+<%= f.input :body, :label => "Κείμενο" %>
+<%= f.button :submit, "Επιβεβαίωση" %>
 <% end %>

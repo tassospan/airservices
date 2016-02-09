@@ -2,25 +2,37 @@
     <nav class="navbar navbar-default navbar-fixed-bottom">
       <div class="container">
         <ul class="nav navbar-nav">
-            <li><%= link_to 'Clients Administration', clients_path %></li>
-            <li><%= link_to 'Home Page', root_path %></li>
+            <li><%= link_to 'Διαχείριση Πελατών', clients_path %></li>
+            <li><%= link_to 'Αρχική Σελίδα', root_path %></li>
         </ul>
       </div>
     </nav>
-    <h1>Admin Panel for Front Page's Inputs</h1>
-    
+    <h1>Πίνακας Διαχείρισης</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Τίτλος Κειμένου</th>
+      <th>Επεξεργασία</th>
+    </tr>
+  </thead>
+
+  <tbody>
     <% @welcomes.each do |w| %>
-    <div class="row">
-    <%= w.title %>  
-    <%= link_to 'Edit', edit_welcome_path(w), class: "btn btn-warning btn-xs" %>
-    </div>
-    <% end %>
+      <tr>
+        <td><%= w.title %></td>
+        <td><%= link_to 'Επεξεργασία', edit_welcome_path(w), class: "btn btn-warning btn-xs" %></td>
+        </tr>
+        <% end %>
+      </th>
+  </tbody>
+</table>
     <hr>
+    <h3>Επεξεργασία Στοιχείων Επικοινωνίας:</h3>
     <% @socials.each do |s| %>
     <div class="row">
-    <%= s.facebook %>
-    <%= s.phone %>
-    <%= link_to 'Edit', edit_social_path(s), class: "btn btn-warning btn-xs" %>
+    <u>Facebook Url:</u> <%= s.facebook %>
+    <u>Τηλέφωνο:</u> <%= s.phone %>
+    <%= link_to 'Επεξεργασία', edit_social_path(s), class: "btn btn-warning btn-xs" %>
     </div>
     <% end %>
     

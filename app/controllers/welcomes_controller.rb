@@ -1,4 +1,5 @@
 class WelcomesController < ApplicationController
+  http_basic_authenticate_with name: "kostas", password: "k@vouni$2016"
   before_action :find_welcome, only: [:edit, :update]
   
   def index

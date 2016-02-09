@@ -1,5 +1,4 @@
 class FrontpageController < ApplicationController
-    before_action :find_client, only: [:show, :edit, :update, :destroy]
     
     def index
         @box_one = Welcome.first
@@ -24,10 +23,6 @@ class FrontpageController < ApplicationController
     end
     
     private
-  
-    def find_client
-        @client = Client.find(params[:id])
-    end
   
     def client_params
         params.require(:client).permit(:name, :surname, :email, :phone, :address, :floor, :message)
