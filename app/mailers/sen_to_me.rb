@@ -3,6 +3,6 @@ class SenToMe < ApplicationMailer
     
     def register_email(client)
          @client = client
-        mail(to: "airservicesathens@gmail.com", subject: "Νέα Εγγραφή")
+        mail(to: "kavoukostas@hotmail.com", subject: "Νέα Εγγραφή")
     end
 end
