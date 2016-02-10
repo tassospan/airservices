@@ -90,5 +90,3 @@ Rails.application.configure do
   }
 end
 
-  config.fb_app_id = ENV["FACEBOOK_APP_ID"] 
-  config.fb_app_secret = ENV["FACEBOOK_SECRET"]
