@@ -25,5 +25,3 @@ module Airservices
   end
 end
 
-Rails.configuration.fb_app_id
-Rails.configuration.fb_app_secret
