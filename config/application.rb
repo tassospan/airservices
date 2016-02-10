@@ -24,3 +24,6 @@ module Airservices
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
+
+Rails.configuration.fb_app_id
+Rails.configuration.fb_app_secret
