@@ -89,3 +89,6 @@ Rails.application.configure do
    :enable_starttls_auto => true
   }
 end
+
+  config.fb_app_id = ENV["FACEBOOK_APP_ID"] 
+  config.fb_app_secret = ENV["FACEBOOK_SECRET"]
