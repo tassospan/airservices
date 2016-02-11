@@ -1,10 +1,12 @@
 class FrontpageController < ApplicationController
-    
+    http_basic_authenticate_with name: ENV["SITE_USERNAME"], password: ENV["SITE_PASSWORD"], except: [:new, :create]
     def index
         @box_one = Welcome.first
         @box_two = Welcome.second
         @box_three = Welcome.last
         @social = Social.first
+        @services = Service.all
+        @service_list = @services.group_by { |t| t.category.name }
     end
     
     def new

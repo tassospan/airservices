@@ -1,0 +1,8 @@
+<div class="container">
+<h1>Υπηρεσία</h1>
+Τίτλος: <%= @service.title %><br>
+Τιμή: <%= @service.price %><br>
+Κατηγορία: <%= Category.find(@service.category_id).name %>
+<hr>
+<%= link_to 'Back', services_path, class:"btn btn-default btn-xs" %>
+</end>
