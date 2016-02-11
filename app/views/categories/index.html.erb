@@ -3,7 +3,6 @@
       <div class="container">
         <ul class="nav navbar-nav">
             <li><%= link_to 'Πίνακας Διαχείρισης', welcomes_path %></li>
-            <li><%= link_to 'Αρχική Σελίδα', root_path %></li>
         </ul>
       </div>
     </nav>
@@ -23,12 +22,12 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
-        <td><%= link_to 'Εμφάνιση', category %></td>
-        <td><%= link_to 'Επεξεργασία', edit_category_path(category) %></td>
-        <td><%= link_to 'Διαγραφή', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '<i class="fa fa-arrows-alt"></i> Προβολή'.html_safe, category, class:"btn btn-success btn-xs" %></td>
+        <td><%= link_to '<i class="fa fa-edit"></i> Επεξεργασία'.html_safe, edit_category_path(category), class:"btn btn-warning btn-xs" %></td>
+        <td><%= link_to '<i class="fa fa-remove"></i> Διαγραφή'.html_safe, category, class:"btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to "Νέα Κατηγορία", new_category_path, class:"btn btn-default btn-xs" %>
+<%= link_to '<i class="fa fa-plus-square"></i> Νέα Κατηγορία'.html_safe, new_category_path, class:"btn btn-primary btn-xs" %>
 </div>

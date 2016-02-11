@@ -1,5 +1,5 @@
 class FrontpageController < ApplicationController
-    http_basic_authenticate_with name: ENV["SITE_USERNAME"], password: ENV["SITE_PASSWORD"], except: [:index, :new, :create]
+    http_basic_authenticate_with name: Rails.application.secrets.name, password: Rails.application.secrets.password, except: [:index, :new, :create]
     def index
         @box_one = Welcome.first
         @box_two = Welcome.second

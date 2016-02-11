@@ -1,5 +1,5 @@
 class WelcomesController < ApplicationController
-  http_basic_authenticate_with name: ENV["SITE_USERNAME"], password: ENV["SITE_PASSWORD"]
+  http_basic_authenticate_with name: Rails.application.secrets.name, password: Rails.application.secrets.password
   before_action :find_welcome, only: [:edit, :update]
   
   def index

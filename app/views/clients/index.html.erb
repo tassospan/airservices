@@ -3,7 +3,6 @@
       <div class="container">
         <ul class="nav navbar-nav">
             <li><%= link_to 'Πίνακας Διαχείρισης', welcomes_path %></li>
-            <li><%= link_to 'Αρχική Σελίδα', root_path %></li>
         </ul>
       </div>
     </nav>
@@ -35,9 +34,9 @@
         <td><%= client.address %></td>
         <td><%= client.floor %></td>
         <td><%= client.message %></td>
-        <td><%= link_to 'Εμφάνιση', client %></td>
-        <td><%= link_to 'Επεξεργασία', edit_client_path(client) %></td>
-        <td><%= link_to 'Διαγραφή', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '<i class="fa fa-arrows-alt"></i> Προβολή'.html_safe, client, class:"btn btn-success btn-xs" %></td>
+        <td><%= link_to '<i class="fa fa-edit"></i> Επεξεργασία'.html_safe, edit_client_path(client), class:"btn btn-warning btn-xs" %></td>
+        <td><%= link_to '<i class="fa fa-remove"></i> Διαγραφή'.html_safe, client, class:"btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
