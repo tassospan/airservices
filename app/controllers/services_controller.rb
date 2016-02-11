@@ -3,7 +3,7 @@ class ServicesController < ApplicationController
     before_action :find_service, only: [:show, :edit, :update, :destroy]
   
   def index
-    @services = Service.all
+    @services = Service.order('category_id ASC')
   end
   
   def show
