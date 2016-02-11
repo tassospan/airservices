@@ -6,7 +6,7 @@ class FrontpageController < ApplicationController
         @box_three = Welcome.last
         @social = Social.first
         @services = Service.all
-        @service_list = @services.order('price DESC').group_by { |t| t.category.name }
+        @service_list = @services.order('price ASC').group_by { |t| t.category.name }
     end
     
     def new

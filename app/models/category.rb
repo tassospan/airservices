@@ -1,3 +1,3 @@
 class Category < ActiveRecord::Base
-    has_many :services, -> { order('price DESC') }
+    has_many :services
 end
