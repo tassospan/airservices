@@ -1,0 +1,7 @@
+<div class="container">
+<h1>Ακίνητο</h1>
+<%= image_tag @property.image.url(:medium) %><br>
+Όνομα: <%= @property.name %><br>
+<hr>
+<%= link_to 'Back', properties_path, class:"btn btn-default btn-xs" %>
+</end>

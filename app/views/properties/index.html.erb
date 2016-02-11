@@ -1,0 +1,35 @@
+<div class="container">
+<nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <ul class="nav navbar-nav">
+            <li><%= link_to 'Πίνακας Διαχείρισης', welcomes_path %></li>
+        </ul>
+      </div>
+    </nav>
+<p id="notice"><%= notice %></p>
+
+<h1>Λίστα Ακινήτων</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Όνομα</th>
+      <th>Φωτογραφία</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.name %></td>
+        <td><%= image_tag property.image.url(:thumb) %></td>
+        <td><%= link_to '<i class="fa fa-arrows-alt"></i> Προβολή'.html_safe, property, class:"btn btn-success btn-xs" %></td>
+        <td><%= link_to '<i class="fa fa-edit"></i> Επεξεργασία'.html_safe, edit_property_path(property), class:"btn btn-warning btn-xs" %></td>
+        <td><%= link_to '<i class="fa fa-remove"></i> Διαγραφή'.html_safe, property, class:"btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to '<i class="fa fa-plus-square"></i> Νέο Ακίνητο'.html_safe, new_property_path, class:"btn btn-primary btn-xs" %>
+</div>

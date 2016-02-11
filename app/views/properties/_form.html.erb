@@ -1,0 +1,5 @@
+<%= simple_form_for(@property, html: { class: 'form-horizontal', multipart: true }) do |f| %>
+<%= f.input :name, :label => "'Ονομα" %>
+<%= f.input :image, as: :file %>
+<%= f.button :submit, "Επιβεβαίωση" %>
+<% end %>

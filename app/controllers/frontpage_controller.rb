@@ -7,6 +7,8 @@ class FrontpageController < ApplicationController
         @social = Social.first
         @services = Service.all
         @service_list = @services.order('price ASC').group_by { |t| t.category.name }
+        @property = Property.first
+        @properties = Property.limit(5).where("id > 1")
     end
     
     def new
