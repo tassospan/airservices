@@ -147,7 +147,7 @@
                             <a href="" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope"></i> <span class="network-name">Email</span></a>
                         </li>
                         <li>
-                            <a href="" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myServices"><i class="fa fa-euro"></i> <span class="network-name">Τιμοκατάλογος</span></a>
+                            <a href="" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myServices"><i class="fa fa-euro"></i> <span class="network-name">Τιμοκαταλογος</span></a>
                         </li>
                     </ul>
                 </div>
@@ -216,11 +216,18 @@
       <div class="modal-body">
         <% @service_list.each do |category, s_items| %>
         <h3><%= category %></h3>
-        <ul>
+        <table class="table">
             <% s_items.each do |s| %>
-            <li><%= s.title %> | <i class="fa fa-eur"></i> <%= s.price %></li>
+            <tr>
+                <td>
+                    <%= s.title %>
+                </td>
+                <td>
+                    <i class="fa fa-eur"></i> <%= s.price %>
+                </td>
+            </tr>  
             <% end %>
-        </ul>
+        </table>
         <% end %>
       </div>
       <div class="modal-footer">
