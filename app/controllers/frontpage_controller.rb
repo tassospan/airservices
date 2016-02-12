@@ -3,7 +3,8 @@ class FrontpageController < ApplicationController
     def index
         @box_one = Welcome.first
         @box_two = Welcome.second
-        @box_three = Welcome.last
+        @box_three = Welcome.third
+        @box_four = Welcome.last
         @social = Social.first
         
         @property = Property.first
