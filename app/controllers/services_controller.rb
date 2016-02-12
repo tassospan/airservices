@@ -3,7 +3,7 @@ class ServicesController < ApplicationController
     before_action :find_service, only: [:show, :edit, :update, :destroy]
   
   def index
-    @services = Service.order('category_id ASC')
+    @services = Service.order('category_id ASC').paginate(:page => params[:page])
   end
   
   def show

@@ -33,5 +33,8 @@
     <% end %>
   </tbody>
 </table>
+<nav>
+<%= will_paginate @services %>
+</nav>
 <%= link_to '<i class="fa fa-plus-square"></i> Νέα Υπηρεσία'.html_safe, new_service_path, class:"btn btn-primary btn-xs" %>
 </div>
