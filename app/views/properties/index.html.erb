@@ -23,7 +23,7 @@
     <% @properties.each do |property| %>
       <tr>
         <td><%= property.name %></td>
-        <td><%= image_tag property.image.url(:thumb) %></td>
+        <td><img src="<%= property.image_link %>" style="width:100px; height: 100px;" /></td>
         <td><%= link_to '<i class="fa fa-arrows-alt"></i> Προβολή'.html_safe, property, class:"btn btn-success btn-xs" %></td>
         <td><%= link_to '<i class="fa fa-edit"></i> Επεξεργασία'.html_safe, edit_property_path(property), class:"btn btn-warning btn-xs" %></td>
         <td><%= link_to '<i class="fa fa-remove"></i> Διαγραφή'.html_safe, property, class:"btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>

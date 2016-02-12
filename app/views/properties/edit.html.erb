@@ -1,6 +1,6 @@
 <div class="container">
 <h1>Επεξεργασία Ακινήτου</h1>
-<%= image_tag @property.image.url(:medium) %>
+<img src="<%= @property.image_link %>" style="width:500px; height: 340px;" />
 <%= render 'form' %>
 <hr>
 <%= link_to 'Άκυρο', :back, class:"btn btn-default btn-xs" %>
