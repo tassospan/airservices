@@ -4,7 +4,7 @@ class ServicesController < ApplicationController
   
   def index
     @services = Service.all
-    
+    @categories = Category.all
   end
   
   def show
