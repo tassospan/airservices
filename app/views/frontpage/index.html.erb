@@ -259,21 +259,7 @@
         <h4 class="modal-title" id="myModalLabel">Κατηγορίες & Τιμοκατάλογος Υπηρεσιών</h4>
       </div>
       <div class="modal-body">
-        <% @service_list.each do |category, s_items| %>
-        <h3><%= category %></h3>
-        <table class="table">
-            <% s_items.each do |s| %>
-            <tr>
-                <td>
-                    <%= s.title %>
-                </td>
-                <td>
-                    <i class="fa fa-eur"></i> <%= s.price %>
-                </td>
-            </tr>  
-            <% end %>
-        </table>
-        <% end %>
+       
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Άκυρο</button>

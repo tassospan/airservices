@@ -5,8 +5,7 @@ class FrontpageController < ApplicationController
         @box_two = Welcome.second
         @box_three = Welcome.last
         @social = Social.first
-        @services = Service.all
-        @service_list = @services.group_by { |t| t.category.name }
+        
         @property = Property.first
         @properties = Property.limit(5).where("id > 1")
     end
