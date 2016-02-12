@@ -31,5 +31,8 @@
     <% end %>
   </tbody>
 </table>
+<nav>
+<%= will_paginate @properties %>
+</nav>
 <%= link_to '<i class="fa fa-plus-square"></i> Νέο Ακίνητο'.html_safe, new_property_path, class:"btn btn-primary btn-xs" %>
 </div>

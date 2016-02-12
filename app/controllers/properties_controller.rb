@@ -3,7 +3,7 @@ class PropertiesController < ApplicationController
     before_action :find_property, only: [:show, :edit, :update, :destroy]
   
   def index
-    @properties = Property.all
+    @properties = Property.paginate(:page => params[:page])
   end
   
   def show
