@@ -146,6 +146,9 @@
   <div class="carousel-inner" role="listbox">
       <div class="item active">
       <%= image_tag @property.image.url(:medium), class:("img-responsive") %>
+      <div class="carousel-caption">
+        <%= @property.name %>
+      </div>
     </div>
       <% @properties.each do |p| %>
     <div class="item">
